@@ -1,0 +1,26 @@
+# Example mcpobs config — drop into ~/.mcpobs/config.toml
+
+[server]
+listen         = "127.0.0.1:7890"
+data_dir       = "~/.mcpobs"
+retention_days = 7
+
+[redaction]
+keys        = ["password", "token", "secret", "api_key", "apikey", "authorization"]
+placeholder = "[redacted]"
+
+[upstreams.filesystem]
+transport = "stdio"
+command   = "npx"
+args      = ["@modelcontextprotocol/server-filesystem", "/Users/me/Documents"]
+
+[upstreams.github]
+transport = "stdio"
+command   = "npx"
+args      = ["@modelcontextprotocol/server-github"]
+env       = { GITHUB_PERSONAL_ACCESS_TOKEN = "ghp_..." }
+
+[upstreams.local-http]
+transport   = "http"
+url         = "http://localhost:9000/mcp"
+listen_path = "/mcp/local-http"

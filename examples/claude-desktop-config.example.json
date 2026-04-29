@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "mcpobs",
+      "args": ["proxy", "--upstream", "filesystem"]
+    },
+    "github": {
+      "command": "mcpobs",
+      "args": ["proxy", "--upstream", "github"]
+    }
+  }
+}

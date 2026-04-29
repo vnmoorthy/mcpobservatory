@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "mcpobs-daemon",
+      "runtimeExecutable": "./target/debug/mcpobs",
+      "runtimeArgs": ["start"],
+      "port": 7890
+    }
+  ]
+}

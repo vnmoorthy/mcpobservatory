@@ -1,0 +1,45 @@
+# Rust
+/target
+**/*.rs.bk
+Cargo.lock.bak
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+.DS_Store
+
+# UI
+ui/node_modules/
+ui/dist/
+ui/.vite/
+ui/.turbo/
+ui/coverage/
+*.log
+
+# data
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+.mcpobs/
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+
+# OS
+Thumbs.db
+
+# Coverage / artifacts
+*.profraw
+*.gcda
+*.gcno
+coverage/
+
+# Launch / private notes — only the templates inside launch/ are committed
+launch/private/
+.gstack/

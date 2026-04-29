@@ -1,0 +1,131 @@
+/*
+ * mcpobs design tokens
+ *
+ * Inspired by Linear, Vercel, Sentry — modern, polished, dark-first.
+ * Sans for chrome, mono for data. Subtle gradients on key surfaces.
+ */
+
+:root {
+  /* surfaces (dark) */
+  --bg-0: #0a0a0c;        /* page */
+  --bg-1: #111114;        /* card */
+  --bg-2: #18181d;        /* hover, selected */
+  --bg-3: #22222a;        /* divider, ring */
+  --border: #22222a;
+  --border-strong: #2c2c36;
+
+  /* foreground */
+  --fg-0: #ededf0;
+  --fg-1: #a8a8b3;
+  --fg-2: #6b6b78;
+
+  /* primary accent — soft mint, slightly desaturated for sophistication */
+  --accent: #5eead4;
+  --accent-strong: #2dd4bf;
+  --accent-soft: #0e2a26;
+  --accent-glow: rgba(94, 234, 212, 0.18);
+
+  /* directional */
+  --client-direction: #86efac;
+  --server-direction: #93c5fd;
+
+  /* semantic */
+  --error: #f87171;
+  --error-soft: #2a1414;
+  --warning: #fbbf24;
+  --warning-soft: #2a200a;
+  --info: #93c5fd;
+  --info-soft: #14202a;
+  --purple: #c4b5fd;
+  --purple-soft: #1d1828;
+
+  /* JSON tree colors (slightly warmer) */
+  --json-key: #c4cad4;
+  --json-string: #86efac;
+  --json-number: #93c5fd;
+  --json-bool: #c4b5fd;
+  --json-null: #6b6b78;
+  --json-punct: #6b6b78;
+
+  /* type */
+  --font-sans: "Inter", "SF Pro Text", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+  --fs-xs: 11px;
+  --fs-sm: 12px;
+  --fs-md: 13px;
+  --fs-lg: 15px;
+  --fs-xl: 18px;
+  --fs-2xl: 24px;
+  --fs-3xl: 32px;
+
+  /* spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  /* radii */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+
+  /* effects */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 16px -4px rgb(0 0 0 / 0.4), 0 2px 6px -2px rgb(0 0 0 / 0.2);
+  --shadow-lg: 0 12px 32px -8px rgb(0 0 0 / 0.5);
+  --shadow-glow: 0 0 0 1px var(--border), 0 0 24px -4px var(--accent-glow);
+  --gradient-accent: linear-gradient(135deg, #5eead4 0%, #93c5fd 100%);
+  --gradient-card: linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0));
+
+  /* transitions */
+  --t-fast: 80ms;
+  --t-base: 150ms;
+}
+
+[data-theme="light"] {
+  /* Tinted page so white cards have a visible edge. */
+  --bg-0: #f3f4f7;
+  --bg-1: #ffffff;
+  --bg-2: #e9ebf0;
+  --bg-3: #d8dae0;
+  --border: #d2d5dc;
+  --border-strong: #b3b6bf;
+  --fg-0: #0a0a0c;
+  --fg-1: #3f4148;
+  --fg-2: #6c6f78;
+  --accent: #0d9488;
+  --accent-strong: #0f766e;
+  --accent-soft: #ccfbf1;
+  --accent-glow: rgba(13, 148, 136, 0.18);
+  --client-direction: #15803d;
+  --server-direction: #1d4ed8;
+  --error: #b91c1c;
+  --error-soft: #fee2e2;
+  --warning: #b45309;
+  --warning-soft: #fef3c7;
+  --info: #1d4ed8;
+  --info-soft: #dbeafe;
+  --purple: #6d28d9;
+  --purple-soft: #ede9fe;
+  --json-key: #3f4148;
+  --json-string: #15803d;
+  --json-number: #1d4ed8;
+  --json-bool: #6d28d9;
+  --json-null: #6c6f78;
+  --json-punct: #6c6f78;
+  /* Subtle inner highlight so white cards lift off the tinted page. */
+  --gradient-card: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0)
+  );
+  --shadow-sm: 0 1px 2px 0 rgb(15 23 42 / 0.05);
+  --shadow-md: 0 4px 12px -4px rgb(15 23 42 / 0.08), 0 1px 3px -1px rgb(15 23 42 / 0.04);
+  --shadow-lg: 0 12px 24px -8px rgb(15 23 42 / 0.12);
+}
+
+[data-theme="light"] .card {
+  box-shadow: var(--shadow-sm);
+}
