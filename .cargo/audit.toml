@@ -1,0 +1,13 @@
+# Configuration for `cargo audit`.
+# We ignore advisories ONLY when the vulnerable code path is provably unreachable
+# in our codebase (transitive dep, feature not enabled, no fix available).
+
+[advisories]
+ignore = [
+  # RUSTSEC-2023-0071 — Marvin attack on `rsa` crate.
+  # Pulled in transitively via `sqlx-mysql` (umbrella `sqlx` crate links it
+  # even when the `mysql` feature is off). We only enable `sqlite` so the
+  # vulnerable RSA decryption code path is never reached. No upstream fix
+  # available; revisit when sqlx splits the umbrella crate.
+  "RUSTSEC-2023-0071",
+]
