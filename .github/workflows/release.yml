@@ -27,7 +27,7 @@ jobs:
         run: |
           pnpm install --frozen-lockfile
           pnpm run build
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: ui-dist
           path: ui/dist
@@ -109,7 +109,7 @@ jobs:
           (cd dist && 7z a "${name}.zip" "${name}")
           (cd dist && sha256sum "${name}.zip" > "${name}.zip.sha256")
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: dist-${{ matrix.target }}
           path: |
