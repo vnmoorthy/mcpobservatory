@@ -59,7 +59,7 @@ jobs:
 
       # rust-embed at compile time embeds ui/dist into the binary, so the UI
       # bundle must exist before we build.
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: ui-dist
           path: ui/dist
