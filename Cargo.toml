@@ -37,7 +37,7 @@ serde_json = { version = "1.0", features = ["preserve_order", "raw_value"] }
 toml = "0.8"
 uuid = { version = "1.10", features = ["v4", "serde"] }
 chrono = { version = "0.4", features = ["serde"] }
-similar = { version = "2.6", features = ["serde", "text"] }
+similar = { version = "3.1", features = ["serde", "text"] }
 
 # storage
 sqlx = { version = "0.8", default-features = false, features = ["runtime-tokio-rustls", "sqlite", "macros", "migrate", "chrono", "json"] }
