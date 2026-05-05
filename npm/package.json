@@ -1,0 +1,47 @@
+{
+  "name": "@vnmoorthy/mcpobs",
+  "version": "0.1.0",
+  "description": "Local-first proxy and trace viewer for the Model Context Protocol (MCP). See every JSON-RPC message your AI agents send.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai-agents",
+    "claude",
+    "cursor",
+    "debugging",
+    "observability",
+    "proxy",
+    "tracing"
+  ],
+  "homepage": "https://github.com/vnmoorthy/mcpobservatory#readme",
+  "bugs": "https://github.com/vnmoorthy/mcpobservatory/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vnmoorthy/mcpobservatory.git"
+  },
+  "license": "Apache-2.0",
+  "author": "vnmoorthy",
+  "bin": {
+    "mcpobs": "bin/mcpobs.js"
+  },
+  "files": [
+    "bin/",
+    "postinstall.js",
+    "README.md"
+  ],
+  "scripts": {
+    "postinstall": "node postinstall.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ]
+}

@@ -24,12 +24,17 @@ A local-first proxy and trace viewer for the [Model Context Protocol](https://mo
 ## Install
 
 ```bash
+# curl (recommended)
 curl -sSL https://raw.githubusercontent.com/vnmoorthy/mcpobservatory/main/scripts/install.sh | sh
+
+# npm
+npm install -g @vnmoorthy/mcpobs
+
+# cargo
+cargo install --git https://github.com/vnmoorthy/mcpobservatory mcpobs-cli
 ```
 
-One binary. macOS (arm64/x64), Linux (arm64/x64), Windows (x64). No daemon, no sudo, no signup.
-
-Prefer `cargo install`? `cargo install --git https://github.com/vnmoorthy/mcpobservatory mcpobs-cli`.
+One binary. macOS (arm64/x64), Linux (arm64/x64), Windows (x64). No daemon, no sudo, no signup. The npm package is a thin wrapper that downloads the prebuilt binary from the matching GitHub release on install (sha256 verified).
 
 ## Quickstart
 
